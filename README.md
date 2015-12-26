@@ -2,7 +2,7 @@
 
 This guide explains how the R script of the project was implemented and the steps that were performed to get the final result. It is divided as follows:
 
-* Downloading and extracting data files (additional)
+* Downloading and extracting data files
 * Created the R Script run_analisys for the project:
   * Step 1 - Merging the training and the test sets to create one data set
   * Step 2 - Extracting only the measurements on the mean and standard deviation for each measurement
@@ -10,7 +10,7 @@ This guide explains how the R script of the project was implemented and the step
   * Step 4 - Appropriately labels the data set with descriptive variable names
   * Step 5 - Creating a independent tidy data set with the average of each variable for each activity and each subject
   
-## Downloading and extracting data files (additional)
+## Downloading and extracting data files
 This block is included for easy downloading and extracting the data files.
 First the data file was downloaded from the website indicated on the course page (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and saved in a directory called "data" with the name "getdata-PROJECTFiles UCI-HAR Dataset.zip ". Then it was used to unzip () function to extract the data files. The directories were structured as follows:
 
