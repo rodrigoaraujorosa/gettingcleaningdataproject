@@ -68,6 +68,28 @@ First it created a data frame with the file data "features.txt" and saved in the
 
 To extract only the columns with mean and standard deviation, the grep () function was used to get the occurrences "mean ()" and "std ()" at the end of the name of each variable. For this it used the regular expression "mean \\ (\\) $ | std \\ (\\) $" and saved in the variable "colmeasurements". There are no specific marking criteria on the number of columns. 18 columns were returned (V201 "" V202 "" V214 "" V215 "" V227 "" V228 "" V240 "" V241 "" V253 "" V254 "" V503 "" V504 "" V516 "" V517 "" V529 "" V530 "" V542 "" V543 ').
 
+To return the column names (features), it was used to grep function ("mean \ (\) $ | std \ (\) $", featuresdf $ V2, value = TRUE). With the parameter value = TRUE.
+
+ [1] "tBodyAccMag-mean()"         
+ [2] "tBodyAccMag-std()"          
+ [3] "tGravityAccMag-mean()"      
+ [4] "tGravityAccMag-std()"       
+ [5] "tBodyAccJerkMag-mean()"     
+ [6] "tBodyAccJerkMag-std()"      
+ [7] "tBodyGyroMag-mean()"        
+ [8] "tBodyGyroMag-std()"         
+ [9] "tBodyGyroJerkMag-mean()"    
+[10] "tBodyGyroJerkMag-std()"     
+[11] "fBodyAccMag-mean()"         
+[12] "fBodyAccMag-std()"          
+[13] "fBodyBodyAccJerkMag-mean()" 
+[14] "fBodyBodyAccJerkMag-std()"  
+[15] "fBodyBodyGyroMag-mean()"    
+[16] "fBodyBodyGyroMag-std()"     
+[17] "fBodyBodyGyroJerkMag-mean()"
+[18] "fBodyBodyGyroJerkMag-std()"
+
+
 To assemble the data frame "measurementsdf" was done used the "select ()" the data frame "trainxtestdf" by selecting the column vector "colmeasurements" more columns "V562" and "V563". Looking at Their dimensions with a command like dim (), the dimension is 10299 observations and 20 variables.
 
 ### Step 3 - Using descriptive activity names to name the activities in the data set
@@ -96,16 +118,26 @@ Finally, it replaced the "V562" column by "V2" and excluded the original column 
 ### Step 4 - Appropriately labels the data set with descriptive variable names
 First the data frame has been ordered, the columns 1 and 20 were placed at the beginning of the data frame. Finally, they renamed the 20 columns with the following names:
 
- [1] "Activity"                                        "Subject"                                        
- [3] "Mean Time Body Acc Mag"                          "Standard Deviation Time Body Acc Mag"           
- [5] "Mean Time Gravity Acc Mag"                       "Standard Deviation Time Gravity Acc Mag"        
- [7] "Mean Time Body Acc Jerk Mag"                     "Standard Deviation Time Body Acc Jerk Mag"      
- [9] "Mean Time Body Gyro Mag"                         "Standard Deviation Time Body Gyro Mag"          
-[11] "Mean Time Body Gyro Jerk Mag"                    "Standard Deviation Time Body Gyro Jerk Mag"     
-[13] "Mean Freq Body Acc Mag"                          "Standard Deviation Freq Body Acc Mag"           
-[15] "Mean Freq Body Body Acc Jerk Mag"                "Standard Deviation Freq Body Body Acc Jerk Mag" 
-[17] "Mean Freq Body Body Gyro Mag"                    "Standard Deviation Freq Body Body Gyro Mag"     
-[19] "Mean Freq Body Body Gyro Jerk Mag"               "Standard Deviation Freq Body Body Gyro Jerk Mag"
+ [1] "Activity"                                       
+ [2] "Subject"                                        
+ [3] "Mean Time Body Acc Mag"                         
+ [4] "Standard Deviation Time Body Acc Mag"           
+ [5] "Mean Time Gravity Acc Mag"                      
+ [6] "Standard Deviation Time Gravity Acc Mag"        
+ [7] "Mean Time Body Acc Jerk Mag"                    
+ [8] "Standard Deviation Time Body Acc Jerk Mag"      
+ [9] "Mean Time Body Gyro Mag"                        
+[10] "Standard Deviation Time Body Gyro Mag"          
+[11] "Mean Time Body Gyro Jerk Mag"                   
+[12] "Standard Deviation Time Body Gyro Jerk Mag"     
+[13] "Mean Freq Body Acc Mag"                         
+[14] "Standard Deviation Freq Body Acc Mag"           
+[15] "Mean Freq Body Body Acc Jerk Mag"               
+[16] "Standard Deviation Freq Body Body Acc Jerk Mag" 
+[17] "Mean Freq Body Body Gyro Mag"                   
+[18] "Standard Deviation Freq Body Body Gyro Mag"     
+[19] "Mean Freq Body Body Gyro Jerk Mag"              
+[20] "Standard Deviation Freq Body Body Gyro Jerk Mag"
 
 Details of variables in CodeBook.md
 
